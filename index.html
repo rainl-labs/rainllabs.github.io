@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainl Labs | TENEBRIX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <style>
+        :root { --bg: #050508; --neon-blue: #00f3ff; --neon-purple: #bc13fe; --text: #e0e0e0; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
+        header { padding: 50px 20px; border-bottom: 2px solid var(--neon-blue); box-shadow: 0 0 20px var(--neon-blue); }
+        h1 { font-size: 3rem; letter-spacing: 8px; color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); margin: 0; }
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 2px solid var(--neon-purple); border-radius: 8px; margin-bottom: 40px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .splide__slide img { width: 100%; border-radius: 8px; border: 1px solid var(--neon-blue); }
+        .btn { display: inline-block; padding: 15px 30px; border: 2px solid var(--neon-blue); color: var(--neon-blue); text-decoration: none; font-weight: bold; transition: 0.3s; margin: 10px; border-radius: 5px; }
+        .btn:hover { background: var(--neon-blue); color: var(--bg); box-shadow: 0 0 20px var(--neon-blue); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TENEBRIX</h1>
+    <p>By Rainl Labs</p>
+</header>
+
+<div class="container">
+    <h2>Official Trailer</h2>
+    <div class="video-container">
+        <!-- REPLACE THE ID BELOW WITH YOUR ACTUAL YOUTUBE VIDEO ID -->
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h2>Screenshots</h2>
+    <section id="image-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="https://via.placeholder.com/800x450/050508/00f3ff?text=Screenshot+1" alt="Tenebrix 1"></li>
+          <li class="splide__slide"><img src="https://via.placeholder.com/800x450/050508/00f3ff?text=Screenshot+2" alt="Tenebrix 2"></li>
+        </ul>
+      </div>
+    </section>
+
+    <div style="margin-top: 50px;">
+        <a href="mailto:your-email@example.com" class="btn">Email Rainl Labs</a>
+        <a href="#" class="btn" style="border-color: var(--neon-purple); color: var(--neon-purple);">Buy Me a Coffee</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#image-slider', { type: 'loop', perPage: 1, autoplay: true }).mount();
+    });
+</script>
+</body>
+</html>
